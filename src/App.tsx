@@ -1,12 +1,13 @@
+import { Nav } from "components"
+
+
 
 const App = () => {
+
   return (
-    <h1
-      className="text-3xl font-bold underline"
-      onClick={() => { }}
-    >
-      Hello world!
-    </h1>
+    <div>
+      <Nav />
+    </div>
   )
 }
 
