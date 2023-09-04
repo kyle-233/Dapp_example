@@ -1,12 +1,15 @@
-import { Nav } from "components"
+import { Nav, Theme } from "components"
 
 
 
 const App = () => {
 
   return (
-    <div>
+    <div className="h-screen flex flex-col">
       <Nav />
+      <main className="flex-1 flex justify-center items-center">
+        <Theme />
+      </main>
     </div>
   )
 }
