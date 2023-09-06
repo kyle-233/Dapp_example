@@ -28,6 +28,12 @@
       ],
       "config": [
         "src/config"
+      ],
+      "provider": [
+        "src/providers"
+      ],
+      "utils/*": [
+        "src/utils/*"
       ]
     },
   },

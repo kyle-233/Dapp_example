@@ -1,19 +1,17 @@
-import { useState } from "react"
+import { useContext } from "react"
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
+import { Provider, ThemeContext } from "provider";
 
-type ThemeProps = "light" | "dark"
 
-const Theme = () => {
-    const [theme, setTheme] = useState<ThemeProps>("light")
+const ThemeButton = () => {
 
-    const toggleTheme = () => {
-        setTheme((theme) => theme === 'light' ? 'dark' : 'light')
-    }
+    const { theme, toggleTheme } = useContext(ThemeContext) as Provider;
+
     return (
         <button
             type="button"
-            className={`relative border rounded-2xl w-14 h-7 p-1 
-                ${theme === 'light' ? 'bg-white' : 'bg-indigo-950'}`
+            className={`relative border rounded-2xl w-14 h-7 p-1 border-[1px] 
+                ${theme === 'light' ? 'bg-white border-inherit' : 'border-slate-300'}`
             }
             onClick={toggleTheme}
         >
@@ -33,4 +31,4 @@ const Theme = () => {
     )
 }
 
-export default Theme
+export default ThemeButton
